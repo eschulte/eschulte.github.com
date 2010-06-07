@@ -1,0 +1,86 @@
+
+
+
+#me {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  z-index: -1; }
+
+#doc-info {
+  margin-top: 3em;
+  margin: auto;
+  float: center;
+  text-align: center;
+  font-size: 10pt;
+  max-width: 75%; }
+
+.clear-fix {
+  clear: both; }
+
+.title {
+  padding-left: 100px;
+  color: #000; }
+
+#table-of-contents {
+  padding-left: 100px;
+  padding-right: 100px;
+  float: center;
+  line-height: 240%;
+  text-align: center;
+  z-index: 1; }
+  #table-of-contents ul {
+    float: center;
+    text-align: center;
+    display: inline;
+    margin: 2em;
+    padding: 2em; }
+    #table-of-contents ul li {
+      float: center;
+      text-align: center;
+      list-style-type: none;
+      display: inline; }
+      #table-of-contents ul li a {
+        float: center;
+        text-align: center;
+        text-decoration: none;
+        margin: .5em;
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        color: #000;
+        padding: .25em;
+        background-color: #a2b5cd;
+        white-space: nowrap; }
+      #table-of-contents ul li a:hover {
+        background-color: #bcd2ee; }
+  #table-of-contents h2 {
+    display: none; }
+
+#content {
+  color: #2e2e2e;
+  font-family: 'Yanone Kaffeesatz', arial, serif; }
+
+#outline-container-academics {
+  padding-top: 200px; }
+
+.outline-text-3 {
+  margin-left: 2em; }
+
+h3 {
+  margin-left: 1em;
+  color: #000; }
+
+a {
+  text-decoration: none;
+  color: #4a708b; }
+
+a:hover {
+  text-decoration: underline; }
+
+.img-link a {
+  color: white; }
+
+blockquote {
+  border-left: 1px solid gray;
+  padding-left: 4px; }

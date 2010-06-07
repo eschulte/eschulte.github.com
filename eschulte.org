@@ -1,0 +1,139 @@
+#+TITLE: Eric Schulte
+#+OPTIONS: num:nil ^:nil
+#+STYLE: <link rel="stylesheet"href="data/stylesheet.css"type="text/css">
+
+# font
+#+begin_html
+  <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+#+end_html
+
+# me
+#+begin_html
+  <div id="me">
+    <img src="data/dock.png" class="" alt="me" />
+  </div>
+#+end_html
+
+#+HTML: <center>
+- See my homepage at http://cs.unm.edu/~eschulte/
+- See my github page at http://github.com/eschulte
+#+HTML: </center>
+
+#+begin_src emacs-lisp :results silent :exports none
+  (setq git-homepage-dir (file-name-directory (or load-file-name buffer-file-name)))
+  (unless (boundp 'org-publish-project-alist)
+    (setq org-publish-project-alist nil))
+  (add-to-list 'org-publish-project-alist
+               `("git-homepage"
+                  :base-directory ,git-homepage-dir
+                  :base-extension "org"
+                  :publishing-directory ,git-homepage-dir
+                  :index-filename "eschulte.org"
+                  :auto-postamble nil
+                  :postamble
+                  "<div class=\"clear-fix\"></div>
+  <div id=\"doc-info\">
+    This document is created
+    using <a href=\"http://orgmode.org/\">Org-mode</a>
+    and <a href=\"http://orgmode.org/worg/org-contrib/babel/\">Org-babel</a>.
+    The original plain-text document is available
+    at <a href=\"eschulte.org\">eric-schulte.org</a>
+    (<a href=\"eschulte-source.org.html\" title=\"how this document looks from inside Emacs\">preview</a>).
+  </div>"
+                  :style "<link rel=\"stylesheet\"href=\"data/stylesheet.css\"type=\"text/css\">"
+                  :publishing-function (org-publish-org-to-html org-publish-org-to-org)
+                  :plain-source t
+                  :htmlized-source t))
+#+end_src
+
+#+begin_src sass :file data/stylesheet.css :results silent :exports none
+  -# @font-face
+  -#   font-family: museo
+  -#   src: url('Museo300-Regular.otf')
+  
+  #me
+    position: absolute
+    top: 0.5em
+    left: 0.5em
+    z-index: -1
+  
+  #doc-info
+    margin-top: 3em
+    margin: auto
+    float: center
+    text-align: center
+    font-size: 10pt
+    max-width: 75%
+  
+  .clear-fix
+    clear: both
+  
+  .title
+    padding-left: 100px
+    color: #000
+  
+  #table-of-contents
+    padding-left: 100px
+    padding-right: 100px
+    float: center
+    line-height: 240%
+    text-align: center
+    z-index: 1
+    ul
+      float: center
+      text-align: center
+      display: inline
+      margin: 2em
+      padding: 2em
+      li
+        float: center
+        text-align: center
+        list-style-type: none
+        display: inline
+        a
+          float: center
+          text-align: center
+          text-decoration: none
+          margin: .5em
+          border-radius: 4px
+          -moz-border-radius: 4px
+          -webkit-border-radius: 4px
+          color: #000
+          padding: .25em
+          background-color: #a2b5cd
+          white-space: nowrap
+        a:hover
+          background-color: #bcd2ee
+    h2
+      display: none
+  
+  #content
+    color: #2e2e2e
+    font-family: 'Yanone Kaffeesatz', arial, serif
+    -# font-family: museo, serif
+  
+  #outline-container-academics
+    padding-top: 200px
+  
+  .outline-text-3
+    margin-left: 2em
+  
+  h3
+    margin-left: 1em
+    color: #000
+  
+  a
+    text-decoration: none
+    color: #4a708b
+  a:hover
+    text-decoration: underline
+  
+  
+  .img-link
+    a
+      color: white
+  
+  blockquote
+    border-left: 1px solid gray
+    padding-left: 4px
+#+end_src

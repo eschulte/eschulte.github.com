@@ -47,9 +47,8 @@
 #+end_src
 
 #+begin_src sass :file data/stylesheet.css :results silent :exports none
-  -# @font-face
-  -#   font-family: museo
-  -#   src: url('Museo300-Regular.otf')
+  body
+    font-family: "Georgia", serif
   
   #me
     position: absolute
@@ -109,8 +108,6 @@
   
   #content
     color: #2e2e2e
-    font-family: 'Yanone Kaffeesatz', arial, serif
-    -# font-family: museo, serif
   
   #outline-container-academics
     padding-top: 200px

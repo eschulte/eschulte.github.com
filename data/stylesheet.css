@@ -1,5 +1,5 @@
-
-
+body {
+  font-family: "Georgia", serif; }
 
 #me {
   position: absolute;
@@ -8,6 +8,10 @@
   z-index: -1; }
 
 #doc-info {
+  position: absolute;
+  left: 12.5%;
+  right: 12.5%;
+  bottom: 1em;
   margin-top: 3em;
   margin: auto;
   float: center;
@@ -58,8 +62,7 @@
     display: none; }
 
 #content {
-  color: #2e2e2e;
-  font-family: 'Yanone Kaffeesatz', arial, serif; }
+  color: #2e2e2e; }
 
 #outline-container-academics {
   padding-top: 200px; }
